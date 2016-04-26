@@ -18,7 +18,12 @@ get '/example' do
 end
 
 get '/cat' do
-  "<div style='border: 3px dashed red'>
-  <img src='http://bit.ly/1eze8aE'>
-  </div>"
+  @name = ["jack","emilio"].sample
+  erb :index
+end
+
+get '/random-cat' do
+  p params
+  @name = params[:name]
+  erb :index
 end
