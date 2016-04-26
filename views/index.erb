@@ -1,4 +1,14 @@
 <div style='border: 5px dashed black'>
-<h1>My name is <%= @name %>. Mean badass cat 2.</h1>
+<form action="/named-cat">
+  <label for="name">Name:</label>
+  <input type="text" name="name" />
+  <input type="submit" value= "submit"/>
+</form>
+<form action="/named-cat">
+  <label for="age">Age:</label>
+  <input type="age" name="age" />
+  <input type="submit" value= "submit"/>
+</form>
+<h1>My name is <%= @name %>. Mean badass cat. I am <%= @age %></h1>
 <img src='http://pixdaus.com/files/items/pics/9/66/246966_166450f821c56904e1d0e84947fd65a2_large.jpg'>
-</div>"
+</div>
