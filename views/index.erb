@@ -1,7 +1,7 @@
 <% if @name %>
 <h1>My name is <%= @name %>. Mean badass cat. I am <%= @age %></h1>
 <% end %>
-<form action="/named-cat">
+<form action="/named-cat" method = "post">
   <label for="name">Name:</label>
   <input type="text" name="name" />
   <input type="submit" value= "submit"/>
