@@ -14,6 +14,6 @@ RSpec.feature "Player management" do
   scenario "A Player can attack other players" do
     sign_in_and_play
     click_button "Attack"
-    expect(page).to have_content("Daniel attacked Lucy!")
+    expect(page).to have_content("Hitpoints: 18")
   end
 end
