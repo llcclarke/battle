@@ -1,8 +1,8 @@
 
-<h1 align="center">Player One: <%= @player1 %> VS. Player Two: <%= @player2 %></h1>
+<h1 align="center">Player One: <%= @player1_name %> VS. Player Two: <%= @player2_name %></h1>
 <h2 align="center">Hitpoints: 20 ------ Hitpoints: 20</h2>
 <form action="/attack" method="post">
 <div class="button">
-  <button class="button">Attack <%= @player2%>!</button>
+  <button class="button">Attack <%= @player2_name%>!</button>
 </div>
 </form>
