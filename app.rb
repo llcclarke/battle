@@ -17,6 +17,13 @@ class Battle < Sinatra::Base
     @player1 = session[:player1]
     @player2 = session[:player2]
     erb :play
+
+  end
+
+  post "/attack" do
+    @player1 = session[:player1]
+    @player2 = session[:player2]
+    erb :attack
   end
 
   # start the server if ruby file executed directly
