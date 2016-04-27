@@ -1,10 +1,17 @@
 require "player"
 
 describe Player do
-  subject(:drogo) { Player.new('Khal Drogo') }
+  subject(:tyrion) { Player.new('Tyrion Lannister') }
+
   describe '#name' do
     it 'returns the name' do
-      expect(drogo.name).to eq 'Khal Drogo'
+      expect(tyrion.name).to eq 'Tyrion Lannister'
+    end
+
+    it 'starts with 100 HP' do
+      expect(tyrion.hp).to eq 100
     end
   end
+
+
 end
