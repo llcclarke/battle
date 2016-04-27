@@ -1,19 +1,18 @@
 feature 'Names' do
   scenario 'submitting names' do
-    visit('/')
-    fill_in :player_1_name, with: 'Jack'
-    fill_in :player_2_name, with: 'Ruta'
-    click_button 'Submit'
-    expect(page).to have_content 'Jack vs. Ruta'
+    sign_in_and_play
+    expect(page).to have_content 'Khal Drogo vs. Daenerys Targaryen'
   end
 end
 
 feature 'Hit points' do
   scenario 'see hit points for second player' do
-    visit('/')
-    fill_in :player_1_name, with: 'Jack'
-    fill_in :player_2_name, with: 'Ruta'
-    click_button 'Submit'
-    expect(page).to have_content 'Ruta: 100 HP'
+    sign_in_and_play
+    expect(page).to have_content 'Daenerys Targaryen: 100 HP'
+  end
+
+  scenario 'see hit points for first player' do
+    sign_in_and_play
+    expect(page).to have_content 'Khal Drogo: 100 HP'
   end
 end
