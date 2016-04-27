@@ -2,10 +2,7 @@
 
 RSpec.feature "Player management" do
   scenario "Users create two players" do
-    visit "/"
-    fill_in :player1, :with => "Daniel"
-    fill_in :player2, :with => "Lucy"
-    click_button "Start Game"
+  sign_in_and_play
     expect(page).to have_content("Player One: Daniel VS. Player Two: Lucy")
   end
 
