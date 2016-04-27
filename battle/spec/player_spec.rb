@@ -13,17 +13,7 @@ describe Player do
         expect(tyrion.hp).to eq 100
       end
 
-    describe 'attack' do
-
-      it 'attack reduces hp by 10' do
-        expect{tyrion.attack(cersei)}.to change{cersei.hp}.by(-10)
-      end
-
-      it 'damages the player' do
-        expect(tyrion).to receive(:attack)
-        tyrion.attack(cersei)
-      end
-    end
+    
 
     describe '#HP'
       it 'returns the HP' do
