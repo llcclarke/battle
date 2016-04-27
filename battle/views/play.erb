@@ -1,12 +1,14 @@
+
+
 <!-- <EMBED SRC="https://www.youtube.com/watch?v=J9d9UrK0Jsw" HEIGHT=60 WIDTH=300> -->
-<body style="background-color:#FFDCB7; border: 3px solid black">
+<body style="background-color:#FFDCB7; border: 3px solid black"> 
 <div style="text-align:center">
-<h1><%= @player_1_name%> vs. <%= @player_2_name %></h1>
+<h1><%= @player_1.name %> vs. <%= @player_2.name %></h1>
 </div>
-<div style="float:left"><h3> <%= @player_1_name %>: 100 HP</h3>
+<div style="float:left"><h3> <%= @player_1.name %>: <%= @player_1.hp %> HP</h3>
   <img src='http://vignette1.wikia.nocookie.net/gameofthrones/images/6/61/The_children_Tyrion_with_Bow_S4.png/revision/latest?cb=20140616190514' width="300" height "225"/>
 </div>
-<div style="float:right"><h3> <%= @player_2_name %>: 100 HP </h3>
+<div style="float:right"><h3> <%= @player_2.name %>: <%= @player_2.hp %> HP</h3>
   <img src='http://vignette4.wikia.nocookie.net/gameofthrones/images/c/c6/Cersei-lannister-lena-headey-helen-sloan.jpeg/revision/20120424220203' width="180" height "180"/>
 </div>
 <form action="/attack" method="get">
