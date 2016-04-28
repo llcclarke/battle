@@ -15,5 +15,6 @@ RSpec.feature "Hit points" do
     expect(page).to have_content("Daniel attacked Lucy!")
   end
 
-  
+
+
 end
