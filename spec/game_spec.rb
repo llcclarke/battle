@@ -12,5 +12,16 @@ describe Game do
       game.attack(alex)
     end
   end
+  describe '#player1' do
+    it 'retrieves the first player' do
+      expect(game.player1).to eq lucy
+    end
+  end
+  describe '#player2' do
+    it 'retrieves the second player' do
+      expect(game.player2).to eq alex
+    end
+  end
+
 
 end
