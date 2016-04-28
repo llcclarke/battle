@@ -15,10 +15,10 @@ describe Player do
   end
 
   it 'should lower his hitpoints when it receives damage' do
-    expect{lucy.receive_damage}.to change{lucy.hitpoints}.from(Player::DEFAULT_STARTING_HITPOINTS).to(Player::DEFAULT_STARTING_HITPOINTS - Player::DEFAULT_ATTACK)
+    expect{lucy.receive_damage}.to change{lucy.hitpoints}.by(-Player::DEFAULT_ATTACK)
   end
 
   it 'should be able to attack other players' do
-    expect{daniel.attack(lucy)}.to change{lucy.hitpoints}.from(Player::DEFAULT_STARTING_HITPOINTS).to(Player::DEFAULT_STARTING_HITPOINTS - Player::DEFAULT_ATTACK)
+    expect{daniel.attack(lucy)}.to change{lucy.hitpoints}.by(-Player::DEFAULT_ATTACK)
   end
 end

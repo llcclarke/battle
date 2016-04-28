@@ -2,11 +2,15 @@ require 'game'
 
 describe Game do
 
-  let(:lucy) { Player.new('lucy') }
-  let(:daniel) { Player.new('daniel') }
-  subject(:game) { described_class.new(lucy, daniel) }
+  let(:lucy) { double(:lucy) }
+  let(:alex) { double(:alex) }
+  subject(:game) { described_class.new(lucy, alex) }
 
-  it 'should have two players' do
-    game.should_not be_nil
+  describe '#attack' do
+    it 'should be able to attack other players' do
+      expect(lucy).to receive(:receive_damage)
+      game.attack(lucy)
+    end
   end
+
 end
