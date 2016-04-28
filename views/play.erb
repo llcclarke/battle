@@ -3,6 +3,6 @@
 <h2 align="center">Hitpoints: <%= @game.player1.hitpoints%> ------ Hitpoints: <%= @game.player2.hitpoints%></h2>
 <form action="/attack" method="post">
 <div class="button">
-  <button class="button">Attack <%= @game.player2.name%>!</button>
+  <button class="button">Attack <%= @game.alt_player.name%>!</button>
 </div>
 </form>

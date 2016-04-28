@@ -3,7 +3,7 @@ require 'player'
 describe Player do
 
   subject(:lucy) { Player.new('lucy') }
-  subject(:daniel) { Player.new('daniel') }
+  subject(:daniel) { Player.new('alex') }
 
   it "knows it's name" do
     our_player = Player.new('player')

@@ -20,5 +20,13 @@ RSpec.feature "Player management" do
   scenario "Expect players to switch turns after an attack" do
     sign_in_and_play
     click_button "Attack"
-    expect.(page).to have_content("Attack Alex")
+    click_button "Ok"
+    expect(page).to have_content("Attack Alex")
+  end
+
+  scenario "Expect player 1 to attack first" do
+    sign_in_and_play
+    click_button "Attack"
+    expect(page).to have_content("Alex attacked Lucy!")
+  end
 end

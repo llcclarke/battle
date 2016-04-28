@@ -7,12 +7,12 @@ RSpec.feature "Hit points" do
   scenario "A Player can attack other players" do
     sign_in_and_play
     click_button "Attack"
-    expect(page).to have_content("Daniel attacked Lucy!")
+    expect(page).to have_content("Alex attacked Lucy!")
   end
   scenario "Player 1's attack reduces Player 2's HP by 2" do
     sign_in_and_play
     click_button "Attack"
-    expect(page).to have_content("Daniel attacked Lucy!")
+    expect(page).to have_content("Alex attacked Lucy!")
   end
 
 
