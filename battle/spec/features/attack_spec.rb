@@ -5,11 +5,17 @@ feature 'Attack player' do
     expect(page).to have_content "Tyrion Lannister attacked Cersei Lannister"
   end
 
-  scenario 'Attack reduces hp by 10' do
-    sign_in_and_play
-    click_button('Attack')
-    click_button 'OK'
+  scenario 'Player 2 HP reduces by 10' do
+    sign_in_and_attack
     expect(page).not_to have_content "Cersei Lannister: 100 HP"
     expect(page).to have_content "Cersei Lannister: 90 HP"
+  end
+
+  scenario 'Player 1 HP reduces by 10' do
+    sign_in_and_attack
+    click_button 'Attack'
+    click_button 'OK'
+    expect(page).not_to have_content "Tyrion Lannister: 100 HP"
+    expect(page).to have_content "Tyrion Lannister: 90 HP"
   end
 end
