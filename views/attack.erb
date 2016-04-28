@@ -2,8 +2,16 @@
 <h1 align="center">Player One: <%= @game.player1.name%> VS. Player Two: <%= @game.player2.name %></h1>
 <h2 align="center">Hitpoints: <%= @game.player1.hitpoints %> ------ Hitpoints:  <%= @game.player2.hitpoints %> </h2>
 <h3 align="center"><%= @game.current_player.name %> attacked <%= @game.alt_player.name %>!</h3>
-<form action="/play" method="get">
-<div class="button">
-  <button class="button">Ok</button>
-</div>
-</form>
+<% if !!@game.loser %>
+  <form action="/lose" method="get">
+  <div class="button">
+    <button class="button">Ok</button>
+  </div>
+  </form>
+<% else %>
+  <form action="/play" method="get">
+  <div class="button">
+    <button class="button">Ok</button>
+  </div>
+  </form>
+<% end %>

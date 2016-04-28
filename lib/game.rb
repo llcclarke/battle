@@ -17,6 +17,9 @@ class Game
     player.receive_damage
   end
 
+  def loser
+    @loser = [player1, player2].select{|player| player.dead? == true}.first
+  end
 
   def switch_turns
     @alt_player = @current_player

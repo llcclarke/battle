@@ -29,6 +29,11 @@ class Battle < Sinatra::Base
     erb :attack
   end
 
+  get '/lose' do
+    @game = $game
+    "GAME OVER! " + @game.loser.name + " loses :("
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end

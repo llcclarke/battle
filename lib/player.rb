@@ -21,4 +21,8 @@ attr_reader :hitpoints
   def receive_damage
     @hitpoints -= DEFAULT_ATTACK
   end
+
+  def dead?
+    @hitpoints <= 0
+  end
 end
