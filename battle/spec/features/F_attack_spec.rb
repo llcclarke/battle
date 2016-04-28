@@ -1,4 +1,5 @@
 feature 'Attack player' do
+
   scenario 'Attacks player 2 and confirms' do
     sign_in_and_play
     click_button('Attack')

@@ -1,4 +1,5 @@
 feature 'switching turns' do
+
   scenario 'see the current turn at the start of the game' do
     sign_in_and_play
     expect(page).to have_content "Tyrion Lannister's turn"
