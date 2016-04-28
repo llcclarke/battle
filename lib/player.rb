@@ -18,9 +18,7 @@ attr_reader :hitpoints
     @hitpoints
   end
 
-  def attack(player)
-    player.receive_damage
-  end
+
 
   def receive_damage
     @hitpoints -= DEFAULT_ATTACK
