@@ -29,4 +29,15 @@ RSpec.feature "Player management" do
     click_button "Attack"
     expect(page).to have_content("Alex attacked Lucy!")
   end
+  scenario "Expect player to lose when out of hitpoints" do
+    sign_in_and_play
+    19.times do
+      click_button "Attack"
+      click_button "Ok"
+    end
+    expect(page).to have_content("GAME OVER! Lucy loses :(")
+  end
+
+
+
 end
