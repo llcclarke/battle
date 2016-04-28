@@ -1,7 +1,7 @@
-
-<h1 align="center">Player One: <%= @game.player1.name%> VS. Player Two: <%= @game.player2.name %></h1>
-<h2 align="center">Hitpoints: <%= @game.player1.hitpoints %> ------ Hitpoints:  <%= @game.player2.hitpoints %> </h2>
-<h3 align="center"><%= @game.current_player.name %> attacked <%= @game.alt_player.name %>!</h3>
+<center>
+<h1>Player One: <%= @game.player1.name%> VS. Player Two: <%= @game.player2.name %></h1>
+<h2>Hitpoints: <%= @game.player1.hitpoints %> ------ Hitpoints:  <%= @game.player2.hitpoints %> </h2>
+<h3><%= @game.current_player.name %> attacked <%= @game.alt_player.name %>!</h3>
 <% if !!@game.loser %>
   <form action="/lose" method="get">
   <div class="button">
@@ -15,3 +15,5 @@
   </div>
   </form>
 <% end %>
+
+<img src=http://media2.popsugar-assets.com/files/2014/04/10/024/n/1922283/748b233e5e51af64_buffy-the-vampire-slayer-gifs-buffy-the-vampire-slayer-23448026-370-212.xxxlarge/i/Buffy-can-fight-she-does-hard-work-ready-demons.gif></center>
