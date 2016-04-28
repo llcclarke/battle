@@ -1,8 +1,11 @@
 
 <body style="background-color:#FFDCB7; border: 3px solid black">
-<iframe width="0" height="0" src="https://www.youtube.com/embed/J9d9UrK0Jsw?autoplay=1" frameborder="0" allowfullscreen></iframe>
+<!-- <iframe width="0" height="0" src="https://www.youtube.com/embed/J9d9UrK0Jsw?autoplay=1" frameborder="0" allowfullscreen></iframe> -->
 <div style="text-align:center">
 <h1><%= @game.player_1.name %> vs. <%= @game.player_2.name %></h1>
+</div>
+<div style="text-align:center">
+  <h2><%= @game.current_turn.name %>'s turn </h2>
 </div>
 <div style="float:left"><h3> <%= @game.player_1.name %>: <%= @game.player_1.hp %> HP</h3>
   <img src='http://vignette1.wikia.nocookie.net/gameofthrones/images/6/61/The_children_Tyrion_with_Bow_S4.png/revision/latest?cb=20140616190514' width="300" height "225"/>

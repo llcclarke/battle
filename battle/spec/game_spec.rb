@@ -23,5 +23,17 @@ describe Game do
       expect(subject).to receive(:attack)
       subject.attack(player_2)
     end
+
+    it 'damages the other player' do
+      expect(subject).to receive(:attack)
+      subject.attack(player_1)
+    end
+  end
+
+  describe '#switch_turns' do
+    it 'should change the turn' do
+      game.switch_turns
+      expect(subject.current_turn).to eq player_2
+    end
   end
 end
