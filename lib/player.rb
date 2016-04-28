@@ -19,10 +19,16 @@ attr_reader :hitpoints
   end
 
   def receive_damage
-    @hitpoints -= DEFAULT_ATTACK
+    @hitpoints -= random_damage
   end
 
   def dead?
     @hitpoints <= 0
   end
+
+  private
+  def random_damage
+    rand(5)
+  end
+
 end
