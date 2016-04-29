@@ -13,11 +13,15 @@ describe Player do
         expect(tyrion.hp).to eq 100
       end
 
-
-
     describe '#HP'
       it 'returns the HP' do
         expect(cersei.hp).to eq described_class::DEFAULT_HP
+      end
+    end
+
+    describe '#receive_damage' do
+      it 'Player receives random damage' do
+        expect {tyrion.receive_damage}.to change {tyrion.hp}
       end
     end
 end
